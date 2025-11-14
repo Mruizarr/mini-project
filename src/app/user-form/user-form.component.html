@@ -1,0 +1,11 @@
+<h2>User registration</h2>
+<form (ngSubmit)="addUser()">
+  <input type="text" placeholder="Name" [(ngModel)]="user.name" name="name" required />
+  <input type="email" placeholder="Email" [(ngModel)]="user.email" name="email" required />
+  <button type="submit">Add</button>
+</form>
+
+<h3>Registered users:</h3>
+<ul>
+  <Li *ngFor="let u of users">{{ u.name }} - {{ u.email }}</Li>
+</ul>
